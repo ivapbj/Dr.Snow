@@ -34,13 +34,10 @@ export default function Home() {
             <p className="eyebrow light">RESIDENTIAL SNOW REMOVAL · WESTERN MA</p>
             <h1>We watch the weather.<br /><em>You enjoy the winter.</em></h1>
             <p className="hero-lead">No late-night calls. No guessing who will show up. Send your address, let Dr. Snow confirm your property, and join the route before the first storm.</p>
-            <div className="button-row">
-              <Link className="button button-primary" href="/plans">See reference pricing <ArrowRight size={18} /></Link>
-            </div>
             <p className="micro"><CheckCircle2 size={15} /> Service automatically begins at 2 inches of accumulation.</p>
           </div>
           <div className="hero-visual">
-            <div className="logo-frame"><Image src="/dr-snow-logo.png" alt="Dr. Snow — Snow Removal and Ice Control" width={900} height={900} priority sizes="(max-width: 900px) 90vw, 42vw" /></div>
+            <div className="logo-frame"><Image src="/dr-snow-primary-logo.png" alt="Dr. Snow — Snow Removal and Ice Control" width={900} height={900} priority sizes="(max-width: 900px) 90vw, 42vw" /></div>
             <div className="hero-badge"><Snowflake /><b>LIMITED ROUTE SPOTS</b><span>Reserve early for winter</span></div>
           </div>
         </div>
@@ -73,7 +70,6 @@ export default function Home() {
           <div className="pricing-subheading"><p className="eyebrow">PAY-PER-STORM OPTION</p><h3>Pricing follows the final snowfall total.</h3><p>Pay-per-storm rates remain available. The customer provides an estimated driveway size, and Dr. Snow confirms the classification after reviewing the property.</p></div>
           <div className="plans-grid pay-per-storm-grid">{siteConfig.plans.map((plan) => <PlanCard key={plan.key} plan={plan} compact />)}</div>
           <PriceSchedule />
-          <div className="center"><Link className="text-link" href="/plans">See payment and property-review details <ArrowRight size={17} /></Link></div>
         </div>
       </section>
 

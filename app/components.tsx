@@ -1,12 +1,12 @@
+import Image from "next/image";
 import Link from "next/link";
-import { Check, MapPin, MessageSquareText, Phone, ShieldCheck, Snowflake } from "lucide-react";
+import { Check, MapPin, Phone, ShieldCheck, Snowflake } from "lucide-react";
 import { siteConfig } from "./site-config";
 
 export function Brand() {
   return (
     <Link className="brand" href="/" aria-label="Dr. Snow home">
-      <span className="brand-mark"><Snowflake size={25} aria-hidden="true" /></span>
-      <span><b>DR. SNOW</b><small>SNOW REMOVAL & ICE CONTROL</small></span>
+      <Image className="brand-logo" src="/dr-snow-primary-logo.png" alt="Dr. Snow — Snow Removal and Ice Control" width={160} height={160} priority />
     </Link>
   );
 }
@@ -60,9 +60,6 @@ export function PlanCard({ plan, compact = false }: { plan: Plan; compact?: bool
           <li><Check /> Service begins at 2 inches</li>
         </ul>
       )}
-      <Link className="button button-dark full" href="/#route-form">
-        <MessageSquareText size={17} /> Request driveway review
-      </Link>
       <p className="classification-note">Reference only. Dr. Snow confirms the driveway size before payment.</p>
     </article>
   );
@@ -82,7 +79,7 @@ export function SeasonalPlanCard({ plan }: { plan: Plan }) {
         <li><Check /> Priority route placement</li>
         <li><Check /> Locked seasonal rate</li>
       </ul>
-      <Link className="button button-dark full" href="/#route-form">Request seasonal membership</Link>
+      <p className="classification-note">Reference only. Dr. Snow confirms the driveway size and membership before payment.</p>
     </article>
   );
 }
@@ -100,7 +97,7 @@ export function PriceSchedule() {
           <tfoot><tr><th scope="row">Optional ice control</th>{siteConfig.plans.map((plan) => <td key={plan.key}>+${plan.icePrice}</td>)}</tr></tfoot>
         </table>
       </div>
-      <p className="schedule-disclaimer">Prices are informational. The customer selects an estimated driveway size, and Dr. Snow confirms or adjusts the classification after reviewing the property. The final snowfall total determines the pay-per-storm tier. Primary walkway and front-step clearing is provided at no additional charge only when conditions are safe and route timing permits; it is not guaranteed. <Link className="inline-link" href="/terms">Review Snow & Ice Terms & Conditions</Link>.</p>
+      <p className="schedule-disclaimer">Prices are informational. The customer selects an estimated driveway size, and Dr. Snow confirms or adjusts the classification after reviewing the property. The final snowfall total determines the pay-per-storm tier. Primary walkway and front-step clearing is provided at no additional charge only when conditions are safe and route timing permits; it is not guaranteed. Review the Snow & Ice Terms & Conditions on the Terms page.</p>
     </div>
   );
 }
