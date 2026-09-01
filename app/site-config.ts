@@ -1,6 +1,8 @@
 export const siteConfig = {
   phoneDisplay: "(413) 330-8573",
   phoneHref: "tel:+14133308573",
+  email: "info@drsnowma.com",
+  emailHref: "mailto:info@drsnowma.com",
   smsNumber: "+14133308573",
   smsHref: "sms:+14133308573?body=Hi%20Dr.%20Snow%2C%20I%27d%20like%20to%20check%20route%20availability%20for%20my%20address.",
   domain: "DoctorSnowMA.com",

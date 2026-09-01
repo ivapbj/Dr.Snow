@@ -36,7 +36,6 @@ export default function Home() {
             <p className="hero-lead">No late-night calls. No guessing who will show up. Send your address, let Dr. Snow confirm your property, and join the route before the first storm.</p>
             <div className="button-row">
               <Link className="button button-primary" href="/plans">See reference pricing <ArrowRight size={18} /></Link>
-              <Link className="button button-ghost" href="#route-form"><MapPin size={18} /> Check my address</Link>
             </div>
             <p className="micro"><CheckCircle2 size={15} /> Service automatically begins at 2 inches of accumulation.</p>
           </div>
@@ -93,7 +92,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="final-cta"><div className="shell"><p className="eyebrow">DON’T WAIT FOR THE FIRST STORM</p><h2>Request a driveway review.</h2><p>Send your address first. Dr. Snow may ask for a driveway photo and will confirm route availability before sending the correct Square payment link.</p><div className="button-row centered"><Link className="button button-primary" href="#route-form">Check my address <ArrowRight size={18} /></Link><a className="button button-outline" href={siteConfig.phoneHref}>Call {siteConfig.phoneDisplay}</a></div></div></section>
+      <section className="final-cta"><div className="shell"><p className="eyebrow">DON’T WAIT FOR THE FIRST STORM</p><h2>Request a driveway review.</h2><p>Send your address first. Dr. Snow may ask for a driveway photo and will confirm route availability before sending the correct Square payment link.</p><div className="button-row centered"><a className="button button-outline" href={siteConfig.phoneHref}>Call {siteConfig.phoneDisplay}</a></div></div></section>
     </main>
     <Footer />
   </>;

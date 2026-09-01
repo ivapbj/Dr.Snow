@@ -111,7 +111,7 @@ export function Footer() {
       <div className="shell footer-grid">
         <div><Brand /><p>A division of Dr. Sheds.<br />Local. Trusted. Year-round.</p></div>
         <div><b>Serving Western MA</b><p>Springfield neighborhoods · Wilbraham · East Longmeadow · Longmeadow · Chicopee · Westfield · Agawam & nearby towns</p></div>
-        <div><b>Ready for winter?</b><p><a href={siteConfig.phoneHref}>{siteConfig.phoneDisplay}</a><br />{siteConfig.domain}</p><p><Link className="footer-terms-link" href="/prepare-for-snow-removal">Preparation & service terms</Link><br /><Link className="footer-terms-link" href="/terms">Terms & Conditions</Link></p></div>
+        <div><b>Ready for winter?</b><p><a href={siteConfig.phoneHref}>{siteConfig.phoneDisplay}</a><br /><a href={siteConfig.emailHref}>{siteConfig.email}</a><br />{siteConfig.domain}</p><p><Link className="footer-terms-link" href="/prepare-for-snow-removal">Preparation & service terms</Link><br /><Link className="footer-terms-link" href="/terms">Terms & Conditions</Link></p></div>
       </div>
     </footer>
   );
