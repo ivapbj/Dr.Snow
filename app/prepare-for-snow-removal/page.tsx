@@ -4,8 +4,14 @@ import { ArrowLeft, ArrowRight, Car, ClipboardCheck, Clock3, Snowflake, Triangle
 import { Footer, Header } from "../components";
 
 export const metadata: Metadata = {
-  title: "How to Prepare Before Snow Removal | Dr. Snow MA",
-  description: "Prepare your driveway for Dr. Snow service and review snow and ice conditions, service timing, and customer responsibilities.",
+  title: "How to Prepare for Residential Snow Removal",
+  description: "Prepare your Springfield-area driveway for snow removal and review access, hidden hazards, service timing, and customer responsibilities.",
+  alternates: { canonical: "/prepare-for-snow-removal" },
+  openGraph: {
+    title: "How to Prepare for Residential Snow Removal | Dr. Snow MA",
+    description: "A practical preparation guide for Dr. Snow customers in Greater Springfield and Western Massachusetts.",
+    url: "/prepare-for-snow-removal",
+  },
 };
 
 export default function PreparationPage() {

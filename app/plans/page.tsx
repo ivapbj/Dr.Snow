@@ -1,7 +1,19 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Camera, Check, CreditCard, Info, MessageSquareText } from "lucide-react";
 import { Footer, Header, PriceSchedule, SeasonalPlanCard } from "../components";
 import { siteConfig } from "../site-config";
+
+export const metadata: Metadata = {
+  title: "Snow Removal Prices & Seasonal Plans",
+  description: "Compare residential snow removal prices, seasonal memberships, pay-per-storm rates, and optional ice control in Greater Springfield, MA.",
+  alternates: { canonical: "/plans" },
+  openGraph: {
+    title: "Snow Removal Prices & Seasonal Plans | Dr. Snow MA",
+    description: "Compare seasonal and pay-per-storm residential snow removal options in Greater Springfield, Massachusetts.",
+    url: "/plans",
+  },
+};
 
 export default function PlansPage() {
   return <>

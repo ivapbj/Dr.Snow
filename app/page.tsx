@@ -32,12 +32,13 @@ export default function Home() {
         <div className="shell hero-grid">
           <div className="hero-copy">
             <p className="eyebrow light">RESIDENTIAL SNOW REMOVAL · WESTERN MA</p>
-            <h1>We watch the weather.<br /><em>You enjoy the winter.</em></h1>
+            <h1>Residential snow removal<br /><em>in Greater Springfield, MA.</em></h1>
+            <p className="hero-tagline">We watch the weather. You enjoy the winter.</p>
             <p className="hero-lead">No late-night calls. No guessing who will show up. Send your address, let Dr. Snow confirm your property, and join the route before the first storm.</p>
             <p className="micro"><CheckCircle2 size={15} /> Service automatically begins at 2 inches of accumulation.</p>
           </div>
           <div className="hero-visual">
-            <div className="logo-frame"><Image src="/dr-snow-primary-logo.png" alt="Dr. Snow — Snow Removal and Ice Control" width={900} height={900} priority sizes="(max-width: 900px) 90vw, 42vw" /></div>
+            <div className="logo-frame"><Image src="/dr-snow-primary-logo.webp" alt="Dr. Snow — Snow Removal and Ice Control" width={900} height={900} priority sizes="(max-width: 900px) 90vw, 42vw" /></div>
             <div className="hero-badge"><Snowflake /><b>LIMITED ROUTE SPOTS</b><span>Reserve early for winter</span></div>
           </div>
         </div>
@@ -82,7 +83,14 @@ export default function Home() {
             <h3>Springfield neighborhoods served</h3>
             <div className="area-list neighborhood-list">{siteConfig.springfieldNeighborhoods.map((area) => <span key={area}><Snowflake /> {area}</span>)}</div>
             <h3>Surrounding communities</h3>
-            <div className="area-list">{siteConfig.primaryServiceAreas.filter((area) => area !== "Springfield").map((area) => <span key={area}><Snowflake /> {area}</span>)}<span><Snowflake /> Nearby towns</span></div>
+            <div className="area-list">
+              <Link href="/service-areas/springfield-ma"><Snowflake /> Springfield</Link>
+              <Link href="/service-areas/wilbraham-ma"><Snowflake /> Wilbraham</Link>
+              <Link href="/service-areas/east-longmeadow-ma"><Snowflake /> East Longmeadow</Link>
+              <Link href="/service-areas/longmeadow-ma"><Snowflake /> Longmeadow</Link>
+              {siteConfig.primaryServiceAreas.filter((area) => !["Springfield", "Wilbraham", "East Longmeadow", "Longmeadow"].includes(area)).map((area) => <span key={area}><Snowflake /> {area}</span>)}
+              <span><Snowflake /> Nearby towns</span>
+            </div>
           </div>
           <DrivewayForm />
         </div>

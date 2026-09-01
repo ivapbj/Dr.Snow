@@ -6,7 +6,7 @@ import { siteConfig } from "./site-config";
 export function Brand() {
   return (
     <Link className="brand" href="/" aria-label="Dr. Snow home">
-      <Image className="brand-logo" src="/dr-snow-primary-logo.png" alt="Dr. Snow — Snow Removal and Ice Control" width={160} height={160} priority />
+      <Image className="brand-logo" src="/dr-snow-primary-logo.webp" alt="Dr. Snow — Snow Removal and Ice Control" width={160} height={160} priority />
     </Link>
   );
 }
@@ -109,10 +109,10 @@ export function Footer() {
     <footer>
       <div className="shell footer-grid">
         <div><Brand /><p>A division of Dr. Sheds.<br />Local. Trusted. Year-round.</p></div>
-        <div><b>Serving Western MA</b><p>Springfield neighborhoods · Wilbraham · East Longmeadow · Longmeadow · Chicopee · Westfield · Agawam & nearby towns</p></div>
+        <div><b>Serving Western MA</b><p><Link href="/service-areas/springfield-ma">Springfield</Link> neighborhoods · <Link href="/service-areas/wilbraham-ma">Wilbraham</Link> · <Link href="/service-areas/east-longmeadow-ma">East Longmeadow</Link> · <Link href="/service-areas/longmeadow-ma">Longmeadow</Link> · Chicopee · Westfield · Agawam & nearby towns</p></div>
         <div><b>Ready for winter?</b><p><a href={siteConfig.phoneHref}>{siteConfig.phoneDisplay}</a><br /><a href={siteConfig.emailHref}>{siteConfig.email}</a><br />{siteConfig.domain}</p><p><Link className="footer-terms-link" href="/prepare-for-snow-removal">Preparation & service terms</Link><br /><Link className="footer-terms-link" href="/terms">Terms & Conditions</Link></p></div>
       </div>
-      <p className="shell footer-service-note"><strong>*Service limitation:</strong> Driveway snow removal, the primary walkway, and front steps are included. Dr. Snow reserves the right to delay or skip the driveway, walkway, or steps when extreme cold, weather conditions, or other hazards make service dangerous; when route timing requires moving to the next scheduled customer; when vehicles, objects, snowbanks, or other obstructions have not been cleared; when access is unavailable; or when the area cannot be serviced safely.</p>
+      <p className="shell footer-service-note"><strong>*Service limitation:</strong> Driveway snow removal is the primary contracted service. The primary walkway and front steps are included when safely accessible and route conditions permit. Walkway or step clearing may be delayed or omitted when conditions are unsafe, blocked, inaccessible, or when completing those secondary areas would materially delay the remaining route. Driveway service may be delayed or omitted only when the property is unsafe, blocked, inaccessible, or cannot be serviced without unreasonable risk. See the Terms &amp; Conditions for full details.</p>
     </footer>
   );
 }

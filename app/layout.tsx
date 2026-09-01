@@ -1,19 +1,28 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const siteUrl = "https://dr-snow-ma.theivanacollective.chatgpt.site";
+export const siteUrl = "https://drsnowma.com";
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
   "@id": `${siteUrl}/#business`,
   name: "Dr. Snow",
   description: "Residential seasonal membership and pay-per-storm snow removal with optional ice control serving Greater Springfield and Western Massachusetts.",
   url: siteUrl,
   telephone: "+1-413-330-8573",
-  image: `${siteUrl}/dr-snow-logo.png`,
-  logo: `${siteUrl}/dr-snow-logo.png`,
+  email: "info@drsnowma.com",
+  image: `${siteUrl}/dr-snow-primary-logo.webp`,
+  logo: `${siteUrl}/dr-snow-primary-logo.webp`,
   priceRange: "$$",
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+1-413-330-8573",
+    email: "info@drsnowma.com",
+    contactType: "customer service",
+    areaServed: "US-MA",
+    availableLanguage: ["English"],
+  },
   areaServed: [
     "Springfield, Massachusetts",
     "Sixteen Acres, Springfield, Massachusetts",
@@ -42,23 +51,49 @@ const localBusinessSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "Dr. Snow MA | Snow Removal & Ice Control",
-  description: "Seasonal membership and pay-per-storm residential snow removal with optional ice control in Greater Springfield and Western Massachusetts.",
-  metadataBase: new URL("https://dr-snow-ma.theivanacollective.chatgpt.site"),
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Residential Snow Removal in Springfield, MA | Dr. Snow",
+    template: "%s | Dr. Snow MA",
+  },
+  description: "Residential snow removal and optional ice control in Springfield and surrounding Western Massachusetts communities, with seasonal and pay-per-storm options.",
+  applicationName: "Dr. Snow MA",
+  category: "Snow removal service",
+  keywords: [
+    "snow removal Springfield MA",
+    "residential snow plowing Springfield MA",
+    "ice control Western Massachusetts",
+    "snow removal Wilbraham MA",
+    "snow removal East Longmeadow MA",
+    "snow removal Longmeadow MA",
+  ],
   openGraph: {
-    title: "Dr. Snow MA | Snow Removal & Ice Control",
-    description: "Seasonal and pay-per-storm residential snow removal with optional ice control in Greater Springfield and Western Massachusetts.",
+    title: "Residential Snow Removal in Springfield, MA | Dr. Snow",
+    description: "Residential snow removal and optional ice control serving Greater Springfield and Western Massachusetts.",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Dr. Snow snow removal and ice control in Western Massachusetts" }],
+    url: siteUrl,
+    siteName: "Dr. Snow MA",
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Dr. Snow snow removal and ice control in Western Massachusetts" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dr. Snow MA | Snow Removal & Ice Control",
-    description: "Seasonal and pay-per-storm residential snow removal with optional ice control in Greater Springfield and Western Massachusetts.",
-    images: ["/og.png"],
+    title: "Residential Snow Removal in Springfield, MA | Dr. Snow",
+    description: "Residential snow removal and optional ice control serving Greater Springfield and Western Massachusetts.",
+    images: ["/og.jpg"],
   },
   alternates: { canonical: "/" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
