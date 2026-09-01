@@ -52,6 +52,7 @@ export function PlanCard({ plan, compact = false }: { plan: Plan; compact?: bool
       <h3>{plan.driveway}</h3>
       <div className="price"><sup>$</sup>{startingPrice}<small> / storm</small></div>
       <p className="muted">Starting price for 2–5.9 inches</p>
+      <p className="service-inclusion"><strong>Included:*</strong> Driveway, primary walkway, and front steps.</p>
       <div className="ice-row"><Snowflake size={18} /> Add ice control <b>+${plan.icePrice}</b></div>
       {!compact && (
         <ul className="check-list">
@@ -72,6 +73,7 @@ export function SeasonalPlanCard({ plan }: { plan: Plan }) {
       <h3>{plan.driveway}</h3>
       <div className="seasonal-price"><sup>$</sup>{plan.seasonalPrice}</div>
       <p className="seasonal-label">Seasonal membership</p>
+      <p className="service-inclusion"><strong>Included:*</strong> Driveway, primary walkway, and front steps.</p>
       <ul className="check-list">
         <li><Check /> Up to 15 standard storm services</li>
         <li><Check /> Standard storm: 2–7.9 inches</li>
@@ -97,7 +99,7 @@ export function PriceSchedule() {
           <tfoot><tr><th scope="row">Optional ice control</th>{siteConfig.plans.map((plan) => <td key={plan.key}>+${plan.icePrice}</td>)}</tr></tfoot>
         </table>
       </div>
-      <p className="schedule-disclaimer">Prices are informational. The customer selects an estimated driveway size, and Dr. Snow confirms or adjusts the classification after reviewing the property. The final snowfall total determines the pay-per-storm tier. Primary walkway and front-step clearing is provided at no additional charge only when conditions are safe and route timing permits; it is not guaranteed. Review the Snow & Ice Terms & Conditions on the Terms page.</p>
+      <p className="schedule-disclaimer"><strong>*Included service:</strong> Prices include driveway snow removal plus the primary walkway and front steps, subject to the safety, access, weather, and route-timing limitations stated below and in the Terms &amp; Conditions. The customer selects an estimated driveway size, and Dr. Snow confirms or adjusts the classification after reviewing the property. The final snowfall total determines the pay-per-storm tier.</p>
     </div>
   );
 }
@@ -110,6 +112,7 @@ export function Footer() {
         <div><b>Serving Western MA</b><p>Springfield neighborhoods · Wilbraham · East Longmeadow · Longmeadow · Chicopee · Westfield · Agawam & nearby towns</p></div>
         <div><b>Ready for winter?</b><p><a href={siteConfig.phoneHref}>{siteConfig.phoneDisplay}</a><br /><a href={siteConfig.emailHref}>{siteConfig.email}</a><br />{siteConfig.domain}</p><p><Link className="footer-terms-link" href="/prepare-for-snow-removal">Preparation & service terms</Link><br /><Link className="footer-terms-link" href="/terms">Terms & Conditions</Link></p></div>
       </div>
+      <p className="shell footer-service-note"><strong>*Service limitation:</strong> Driveway snow removal, the primary walkway, and front steps are included. Dr. Snow reserves the right to delay or skip the driveway, walkway, or steps when extreme cold, weather conditions, or other hazards make service dangerous; when route timing requires moving to the next scheduled customer; when vehicles, objects, snowbanks, or other obstructions have not been cleared; when access is unavailable; or when the area cannot be serviced safely.</p>
     </footer>
   );
 }
