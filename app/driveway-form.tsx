@@ -22,12 +22,14 @@ export function DrivewayForm() {
   }, []);
 
   return (
-    <section className="driveway-request" id="route-form" aria-labelledby="request-heading">
+    <section className="driveway-request section" id="request-service" aria-labelledby="request-heading">
+      <div className="shell driveway-request-grid">
       <div className="request-intro">
-        <p className="eyebrow">CHECK ROUTE AVAILABILITY</p>
-        <h2 id="request-heading">Request a property review.</h2>
-        <p>Enter your address, email, phone number, estimated driveway size, and whether you want ice control. Dr. Snow will review the property and confirm or adjust the driveway classification.</p>
-        <p className="request-note">The required form fields are address, email, phone number, estimated driveway size, and a Yes or No ice-control selection. A driveway photo and additional comments are optional. Submitting the form does not charge you or guarantee route placement.</p>
+        <p className="eyebrow">REQUEST SERVICE</p>
+        <h2 id="request-heading">Request Snow Removal Service</h2>
+        <p>Tell us about your property and estimated driveway size. Dr. Snow will review the address, confirm or adjust the driveway classification, and check route availability.</p>
+        <p className="request-note">Submitting this form is a request for route and property review. It does not guarantee service, route placement, or final pricing.</p>
+        <p className="request-note">The form collects your name, service address, email, phone number, estimated Small, Medium, or Large driveway size, a required Yes or No ice-control choice, and optional comments.</p>
         <p className="request-note">Jotform collects only your service information. After approval, Dr. Snow sends a separate secure Square link for payment setup. Card information is entered directly into Square—not this website or Jotform. Automatic monthly seasonal-membership charges require written authorization and follow the schedule in the customer’s Square agreement.</p>
         <p className="request-note">Before submitting, review our <Link className="agreement-link" href="/terms" target="_blank" rel="noopener noreferrer">Snow & Ice Terms & Conditions</Link>, <Link className="agreement-link" href="/prepare-for-snow-removal" target="_blank" rel="noopener noreferrer">property preparation information</Link>, and <a className="agreement-link" href="https://squareup.com/us/en/legal/general/ua" target="_blank" rel="noopener noreferrer">Square’s terms</a>.</p>
       </div>
@@ -41,6 +43,7 @@ export function DrivewayForm() {
           className="request-form-frame"
         />
         <p className="form-fallback">Having trouble with the form? <a href={formUrl} target="_blank" rel="noopener noreferrer">Open the request form in a new tab</a>.</p>
+      </div>
       </div>
     </section>
   );

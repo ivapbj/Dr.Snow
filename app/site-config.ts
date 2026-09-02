@@ -6,9 +6,9 @@ export const siteConfig = {
   smsNumber: "+14133308573",
   smsHref: "sms:+14133308573?body=Hi%20Dr.%20Snow%2C%20I%27d%20like%20to%20check%20route%20availability%20for%20my%20address.",
   domain: "DoctorSnowMA.com",
-  primaryServiceAreas: ["Springfield", "Wilbraham", "East Longmeadow", "Longmeadow", "Chicopee", "Westfield", "Agawam"],
+  primaryServiceAreas: ["Springfield", "Wilbraham", "East Longmeadow", "Longmeadow", "Chicopee", "West Springfield"],
   springfieldNeighborhoods: ["Sixteen Acres", "East Forest Park", "Pine Point", "Boston Road", "East Springfield", "Forest Park", "Indian Orchard"],
-  serviceAreas: ["Springfield", "Wilbraham", "East Longmeadow", "Longmeadow", "Chicopee", "Westfield", "Agawam"],
+  serviceAreas: ["Springfield", "Wilbraham", "East Longmeadow", "Longmeadow", "Chicopee", "West Springfield"],
   plans: [
     {
       key: "small",

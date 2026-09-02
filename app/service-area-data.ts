@@ -35,7 +35,24 @@ export const serviceAreas = {
     localDetails: "The property review accounts for driveway size, parking layout, steps, walkway access, obstructions, and conditions that may affect safe service. Dr. Snow confirms the classification before the customer receives a secure Square payment or enrollment link.",
     communities: ["Longmeadow residential routes", "Approved nearby properties", "Greater Springfield service corridor"],
   },
+  "chicopee-ma": {
+    city: "Chicopee",
+    region: "Massachusetts",
+    title: "Residential Snow Removal in Chicopee, MA",
+    description: "Residential driveway snow removal and optional ice control for approved properties in Chicopee, Massachusetts.",
+    intro: "Dr. Snow provides residential snow removal for approved Chicopee addresses through seasonal membership and pay-per-storm service. Route placement is confirmed only after the property, driveway classification, and available capacity are reviewed.",
+    localDetails: "Chicopee properties can differ in driveway width, parking arrangement, street access, and available space for snow placement. Dr. Snow reviews those conditions before confirming service so the property is assigned the appropriate driveway size and route.",
+    communities: ["Chicopee residential routes", "Approved nearby properties", "Greater Springfield service corridor"],
+  },
+  "west-springfield-ma": {
+    city: "West Springfield",
+    region: "Massachusetts",
+    title: "Residential Snow Removal in West Springfield, MA",
+    description: "Residential driveway snow removal and optional ice control for approved West Springfield, Massachusetts properties.",
+    intro: "West Springfield residents can request seasonal or pay-per-storm residential snow removal from Dr. Snow. The address is reviewed first so driveway size, safe access, pricing, and route availability can be confirmed before payment.",
+    localDetails: "Residential layouts across West Springfield vary in driveway length, width, parking access, walkway placement, and snow-storage space. Dr. Snow reviews the property and may request a photo before approving service and sending the Square link.",
+    communities: ["West Springfield residential routes", "Approved nearby properties", "Greater Springfield service corridor"],
+  },
 } as const;
 
 export type ServiceAreaSlug = keyof typeof serviceAreas;
-

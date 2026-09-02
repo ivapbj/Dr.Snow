@@ -51,7 +51,7 @@ export default async function ServiceAreaPage({ params }: PageProps) {
     <main>
       <section className="page-hero location-hero">
         <div className="shell">
-          <Link className="back-link" href="/#service-area"><ArrowLeft size={16} aria-hidden="true" /> All service areas</Link>
+          <Link className="back-link" href="/#request-service"><ArrowLeft size={16} aria-hidden="true" /> Request service</Link>
           <p className="eyebrow light">DR. SNOW SERVICE AREA</p>
           <h1>Residential snow removal<br /><em>in {area.city}, MA.</em></h1>
           <p>{area.intro}</p>
@@ -81,7 +81,7 @@ export default async function ServiceAreaPage({ params }: PageProps) {
             <h2>{area.city}, Massachusetts</h2>
             <p>Route space is limited and every address requires approval. Listed service areas do not guarantee availability at every property.</p>
             <div className="location-tags">{area.communities.map((community) => <span key={community}><Snowflake /> {community}</span>)}</div>
-            <Link className="button button-primary full" href="/#route-form">Request a property review <ArrowRight size={18} aria-hidden="true" /></Link>
+            <Link className="button button-primary full" href="/#request-service">Request Service <ArrowRight size={18} aria-hidden="true" /></Link>
           </aside>
         </div>
       </section>
@@ -97,10 +97,9 @@ export default async function ServiceAreaPage({ params }: PageProps) {
         </div>
       </section>
 
-      <section className="final-cta"><div className="shell"><p className="eyebrow">CHECK ROUTE AVAILABILITY</p><h2>Request snow removal in {area.city}.</h2><p>Dr. Snow will review the address before confirming service or payment.</p><Link className="button button-primary" href="/#route-form">Start the property review <ArrowRight size={18} /></Link></div></section>
+      <section className="final-cta"><div className="shell"><p className="eyebrow">REQUEST SERVICE</p><h2>Request snow removal in {area.city}.</h2><p>Dr. Snow will review the address before confirming service or payment.</p><Link className="button button-primary" href="/#request-service">Request Service <ArrowRight size={18} /></Link></div></section>
     </main>
     <Footer />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
   </>;
 }
-

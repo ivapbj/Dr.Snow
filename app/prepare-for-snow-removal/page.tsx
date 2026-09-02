@@ -62,7 +62,7 @@ export default function PreparationPage() {
         </div>
       </section>
 
-      <section className="final-cta"><div className="shell"><p className="eyebrow">READY FOR THE NEXT STEP?</p><h2>Tell us about your driveway.</h2><p>Request service and we’ll confirm pricing and route availability.</p><Link className="button button-primary" href="/#route-form">Request snow removal <ArrowRight size={18} aria-hidden="true" /></Link></div></section>
+      <section className="final-cta"><div className="shell"><p className="eyebrow">READY FOR THE NEXT STEP?</p><h2>Tell us about your driveway.</h2><p>Request service and we’ll confirm pricing and route availability.</p><Link className="button button-primary" href="/#request-service">Request Service <ArrowRight size={18} aria-hidden="true" /></Link></div></section>
     </main>
     <Footer />
   </>;

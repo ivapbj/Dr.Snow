@@ -36,8 +36,7 @@ const localBusinessSchema = {
     "East Longmeadow, Massachusetts",
     "Longmeadow, Massachusetts",
     "Chicopee, Massachusetts",
-    "Westfield, Massachusetts",
-    "Agawam, Massachusetts",
+    "West Springfield, Massachusetts",
   ].map((name) => ({ "@type": "Place", name })),
   hasOfferCatalog: {
     "@type": "OfferCatalog",
@@ -66,6 +65,8 @@ export const metadata: Metadata = {
     "snow removal Wilbraham MA",
     "snow removal East Longmeadow MA",
     "snow removal Longmeadow MA",
+    "snow removal Chicopee MA",
+    "snow removal West Springfield MA",
   ],
   openGraph: {
     title: "Residential Snow Removal in Springfield, MA | Dr. Snow",

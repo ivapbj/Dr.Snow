@@ -30,6 +30,8 @@ npm run lint
 - `/service-areas/wilbraham-ma`
 - `/service-areas/east-longmeadow-ma`
 - `/service-areas/longmeadow-ma`
+- `/service-areas/chicopee-ma`
+- `/service-areas/west-springfield-ma`
 - `/robots.txt` — Generated crawler instructions
 - `/sitemap.xml` — Generated XML sitemap
 
